@@ -1,0 +1,214 @@
+@charset "ISO-8859-1";
+
+BODY {
+	background-image: url(back.png); //
+	color: #60ffaa;
+	color: blue;
+	font-size: 14pt;
+	font-family: "Maiandra GD", "comic sans ms"; //
+	font-family: "comic sans ms";
+}
+
+A {
+	text-decoration: none; //
+	color: #ffcc66;
+	color: red;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+div.fix {
+	position: fixed;
+	background-color: darkslategray;
+	height: 70px;
+	width: 50%;
+	z-index: 1;
+}
+
+DIV.left {
+	/*+placement:shift 0px -498px;*/
+	position: relative;
+	left: 220px;
+	top: -45px;
+}
+
+DIV.right {
+	/*+placement:shift 0px -498px;*/
+	position: fixed;
+	font-size: 17px;
+	right: 10px;
+	top: 08px;
+	line-break: loose;
+	background-color: darkslategrey;
+	z-index: 1;
+	width: 50%;
+	height: 70px;
+}
+
+DIV.center {
+	/*+placement:shift 0px -498px;*/
+	position: relative;
+	left: 0px;
+	top: -45px;
+}
+
+SELECT {
+	background-color: burlywood;
+	color: black;
+	border: 1px #66cc00 solid;
+	font-family: "comic sans ms";
+	border-radius: 10pt;
+	width: 50px;
+	height: 20px;
+	font-size: 15px;
+}
+
+table.items {
+	font-size: 15pt; //
+	width: 1024px;
+	border: 0px; //
+	border-spacing: 30px;
+}
+
+td {
+	max-width: 230px;
+}
+
+button {
+	width: 70px;
+	height: 20px;
+	background: burlywood;
+	border: 1px #66cc00 solid;
+	border-radius: 8px;
+	color: black;
+	font-size: 12px;
+	font-family: "Maiandra GD";
+	font-family: "comic sans ms";
+	cursor: pointer;
+}
+
+div.items {
+	/* align-items: right;*/
+	width: 85%;
+	position: absolute;
+	top: 70px;
+	right: 0px;
+}
+
+div.menu {
+	position: fixed;
+	top: 100px;
+	left: 0px;
+	font-size: 15px;
+	height: 80%;
+	overflow: scroll;
+	overflow-x: hidden;
+	width: 170px;
+}
+
+div.userinfo {
+	text-align: center;
+	position: absolute;
+	right: 100px;
+	top: 140px;
+	line-height: 70px;
+}
+
+div.buyit {
+	text-align: center;
+	position: absolute;
+	left: 100px;
+	top: 200px;
+	line-height: 50px;
+}
+
+div.thanks {
+	position: absolute;
+	left: 50px;
+	top: 200px;
+	font-size: 17pt;
+	line-height: 30px;
+}
+
+td.cartitems {
+	width: 300px;
+}
+
+div.bottom {
+	position: absolute;
+	bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+/*.link{
+    background: none;
+    color: #FFAAFF;
+    border: none;
+    font-size: 15pt;
+    width: auto;
+    
+}*/
+a.link {
+	font-size: 15px;
+	position: absolute;
+	left: 10px;
+	font-size: 15px;
+	width: 50px;
+}
+
+button.heading {
+	background-color: burlywood;
+	color: black;
+	border: 1px #66cc00 solid;
+	font-family: "comic sans ms";
+	border-radius: 10pt;
+	width: 50px;
+	height: 20px;
+	font-size: 15px;
+	position: relative;
+	top: 6px;
+}
+
+div.about {
+	position: absolute;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	top: 100px;
+}
+
+div.spcs {
+	position: absolute;
+	right: 0px;
+	margin-right: auto;
+	top: 60px;
+	width: 50%;
+}
+
+div.spcs1 {
+	position: absolute;
+	top: 60px;
+	margin-right: 0px;
+	margin-left: 30%;
+	width: 50%;
+}
+
+button.link {
+	font-family: "Maiandra GD", "comic sans ms";
+	color: #ffcc66;
+	background-color: transparent;
+	border: 0px;
+	font-size: 18px;
+}
+
+button.link:hover {
+	text-decoration: underline
+}
+
+B {
+	
+}

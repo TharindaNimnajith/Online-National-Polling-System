@@ -1,0 +1,63 @@
+@charset "ISO-8859-1";
+@CHARSET "ISO-8859-1";
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+}
+body
+{
+	background:url(image/back.png);
+	font-weight: 400;
+	color: #3a2127;
+	overflow-y: scroll;
+	font-size: 14pt;
+    font-family: "Maiandra GD","comic sans ms";
+}
+#content{
+	background:#f1f1f1; width:470px; margin:0 auto; padding-left:50px; padding-top:20px; padding-bottom:20px;
+}
+#trav{
+	line-height: 24px;
+	font-size: 11px;
+	background: rgba(0, 0, 0, 0.05);
+	position: relative;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	padding:3px;
+	color:orange;
+}
+
+#trav a {
+	padding:8px;
+	text-decoration:none;
+}
+#trav a:link{color:orange;}
+#trav a:visited{color:blue;}
+#trav a:hover{color:red; text-decoration:underline;}
+#trav a:active{color:green;}
+#trav span{
+	float:right;
+}
+#clr{
+	clear: both;
+}
+#content fieldset{border:0px; padding:0px; margin:0px;}
+#content p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
+
+#content input[type="text"] { width: 400px; }
+#content input[type="email"] { width: 400px; }
+#content input[type="password"] { width: 400px; }
+#content input.birthday{width:60px;}
+#content input.birthyear{width:120px;}
+#content textarea{ width:400px;}
+#content label { color: #000; font-weight:bold;font-size: 12px;font-family:Arial, Helvetica; }
+#content label.month {width: 135px;}
+#content input, textarea { background-color: rgba(255, 255, 255, 0.4); border: 1px solid rgba(122, 192, 0, 0.15); padding: 7px; font-family: Keffeesatz, Arial; color: #4b4b4b; font-size: 14px; -webkit-border-radius: 5px; margin-bottom: 15px; margin-top: -10px; }
+#content input:focus, textarea:focus { border: 1px solid #ff5400; background-color: rgba(255, 255, 255, 1); }
+#content .gender {
+  width:410px; height:30px;
+  }
+#content input.buttom{ background: #4b8df9; display: inline-block; padding: 5px 10px 6px; color: #fbf7f7; text-decoration: none; font-weight: bold; line-height: 1;  border: none; position: relative; cursor: pointer; font-size: 14px; font-family:Verdana, Geneva, sans-serif;}
+#content input.buttom:hover	{ background-color: #2a78f6; }
+	

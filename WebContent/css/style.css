@@ -1,0 +1,299 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	font: bold 20px Algerian;
+	color: #38CDA5;
+}
+
+h2 {
+	font: bold 17px cambria;
+}
+
+header, nav, section, article, aside, footer, hgroup {
+	display: block
+}
+
+body {
+	text-align: center;
+}
+
+#whole {
+	border: thin;
+	width: 1000px;
+	margin: 20px auto;
+	text-align: left;
+}
+
+#head {
+	border: 1px bold black;
+	padding: 20px;
+	margin: 0 80 10 80;
+}
+
+#head h1 {
+	font-size: 24px;
+	font-family: algerian;
+	color: Red;
+}
+
+#menu {
+	background: url(../image/navBg.png) repeat-x;
+	height: 43px;
+	margin-top: 0px;
+	color: white;
+}
+
+#menu li {
+	display: inline-block;
+	list-style: none;
+	padding: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	font: bold 14px Times New Romon;
+	font: bold 16px Cambria;
+	font-color: White;
+	text-decoration: none;
+	padding-top: 20px;
+}
+
+#menu a {
+	padding-top: 20px;
+	padding: 20px;
+	padding-bottom: 2px;
+}
+
+#menu li a:link {
+	background-color: none;
+}
+
+#menu li a:visited {
+	background-color: none;
+}
+
+#menu li a:hover {
+	background-color: orange;
+}
+
+#menu li a:active {
+	background-color: green;
+}
+
+#menu li a {
+	text-decoration: none;
+	color: white;
+}
+
+#google {
+	float: right
+}
+
+#link {
+	float: right
+}
+
+#sec {
+	float: left;
+	width: 660px;
+	margin: 30px;
+}
+
+#ad {
+	float: left;
+	width: 220px;
+	padding: 30px;
+	margin
+	50px
+	0px;
+}
+
+#finish {
+	clear: both;
+	font: bold 12px times new roman;
+}
+
+#finish ul {
+	list-style: none;
+	font: bold 14px tohoma;
+}
+
+#foot1 {
+	float: left;
+	width: 280px;
+	margin: 0 auto;
+	position: relative;
+	margin-left: 80px;
+}
+
+#foot2 {
+	float: left;
+	padding: 30px;
+	width: 280px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#foot3 {
+	float: left;
+	width: 280px;
+	padding: 30px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#finish a {
+	text-decoration: none;
+	text-align: left;
+}
+
+#last {
+	clear: both;
+	color: Blue;
+}
+
+button {
+	width: 70px;
+	height: 20px;
+	background: burlywood;
+	border: 1px #66cc00 solid;
+	border-radius: 8px;
+	color: black;
+	font-size: 12px;
+	font-family: "Maiandra GD";
+	font-family: "comic sans ms";
+	cursor: pointer;
+}
+
+button.heading {
+	background-color: burlywood;
+	color: black;
+	border: 1px #66cc00 solid;
+	font-family: "comic sans ms";
+	border-radius: 10pt;
+	width: 50px;
+	height: 20px;
+	font-size: 15px;
+	position: relative;
+	top: 6px;
+}
+
+.clear {
+	clear: both;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+select {
+	background-color: burlywood;
+	color: black;
+	border: 1px #66cc00 solid;
+	font-family: "comic sans ms";
+	border-radius: 10pt;
+	width: 50px;
+	height: 20px;
+	font-size: 15px;
+}
+
+#cont {
+	background-image: url(../image/cont.jpg)
+}
+
+#whole, .footer {
+	display: inline-block;
+}
+
+.footer {
+	background: url(../image/footerBg.png) repeat-x;
+	height: 336px;
+	padding-top: 30px;
+	width: 1024px;
+}
+
+.footer .back2Top {
+	position: absolute;
+	left: 39%;
+	top: -35px;
+}
+
+.subFooter {
+	width: 1020px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.footerMenu {
+	float: left;
+	width: 215px
+}
+
+.footerMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.footerMenu ul li {
+	border-top: 1px dashed #cecaca;
+	padding-top: 5px;
+	margin-top: 5px;
+	background: url(../images/bullets.png) no-repeat left 11px;
+	padding-left: 13px;
+}
+
+.footerMenu ul li:first-child {
+	border: none;
+}
+
+.footerMenu ul li a:hover {
+	color: #f87801;
+	text-decoration: underline;
+}
+
+.marginRigh40 {
+	margin-right: 40px
+}
+
+.footerMenu2 li {
+	float: left;
+	width: 207px;
+	margin-right: 20px
+}
+
+.footerMenu2 ul {
+	list-style-type: none;
+	height: 208px;
+	overflow: hidden;
+}
+
+.footerMenu2 {
+	width: 467px !important
+}
+
+.footerMenu2 ul li.marginNone {
+	margin-right: 0;
+}
+
+.footerMenu2 ul li.marginNone2 {
+	border-top: none;
+}
+
+.footerSocialIcon a {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.footerSocialIcon a:hover {
+	opacity: 0.7;
+}
+
+.footerSocialIcon {
+	width: 233px;
+	float: left;
+	margin: 0 0 0 30px;
+}

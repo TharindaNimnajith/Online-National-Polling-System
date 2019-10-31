@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+
+<!-- SQL queries -->
+
+<Queries>
+
+	<!-- Select a particular voter by username, NIC and password -->
+	<query id="voter_by_username_nic_password">
+         <![CDATA[        
+            SELECT *
+            FROM Voter
+            WHERE username = ? AND nic = ? AND password = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select a particular admin by username, NIC and password -->
+	<query id="admin_by_username_nic_password">
+         <![CDATA[        
+            SELECT *
+            FROM Admin
+            WHERE username = ? AND nic = ? AND password = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select a particular candidate by username, NIC and password -->
+	<query id="candidate_by_username_nic_password">
+         <![CDATA[        
+            SELECT *
+            FROM Candidate
+            WHERE username = ? AND nic = ? AND password = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Update a particular voter password by email -->
+	<query id="update_password_voter">
+         <![CDATA[        
+            UPDATE Voter
+            SET password = ?
+            WHERE email = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Update a particular candidate password by email -->
+	<query id="update_password_candidate">
+         <![CDATA[        
+            UPDATE Candidate
+            SET password = ?
+            WHERE email = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Update a particular admin password by email -->
+	<query id="update_password_admin">
+         <![CDATA[        
+            UPDATE Admin
+            SET password = ?
+            WHERE email = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select a particular voter id by nic -->
+	<query id="select_voter_id">
+         <![CDATA[        
+            SELECT id
+            FROM Voter
+            WHERE nic = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select a particular admin id by nic -->
+	<query id="select_admin_id">
+         <![CDATA[        
+            SELECT id
+            FROM Admin
+            WHERE nic = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select a particular candidate id by nic -->
+	<query id="select_candidate_id">
+         <![CDATA[        
+            SELECT id
+            FROM Candidate
+            WHERE nic = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select the user type by nic -->
+	<query id="select_type_voter">
+         <![CDATA[        
+            SELECT userType
+            FROM Voter
+            WHERE nic = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select the user type by nic -->
+	<query id="select_type_candidate">
+         <![CDATA[        
+            SELECT userType
+            FROM Candidate
+            WHERE nic = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Select the user type by nic -->
+	<query id="select_type_admin">
+         <![CDATA[        
+            SELECT userType
+            FROM Admin
+            WHERE nic = ?;
+         ]]>
+	</query>
+	
+	
+	<!-- Drop the Voter table -->
+	<query id="drop_table_voter">
+         <![CDATA[        
+            DROP TABLE IF EXISTS Voter; 
+         ]]>
+	</query>
+	
+	
+	<!-- Drop the Admin table -->
+	<query id="drop_table_admin">
+         <![CDATA[        
+            DROP TABLE IF EXISTS Admin; 
+         ]]>
+	</query>
+	
+	
+	<!-- Drop the Candidate table -->
+	<query id="drop_table_candidate">
+         <![CDATA[        
+            DROP TABLE IF EXISTS Candidate; 
+         ]]>
+	</query>
+
+
+	<!-- Create the Voter table -->
+	<query id="create_voter_table">
+         <![CDATA[        
+            CREATE TABLE Voter(
+            	id VARCHAR(10),
+	 			username VARCHAR(40) NOT NULL,
+	 			nic CHAR(10) UNIQUE NOT NULL,
+	 			password VARCHAR(20) NOT NULL,
+	 			email VARCHAR(40) UNIQUE NOT NULL,
+	 			userType VARCHAR(15) DEFAULT 'voter',
+	 			isVoted BOOLEAN DEFAULT 0,
+	 			fname VARCHAR(20) NOT NULL,
+	 			lname VARCHAR(20) NOT NULL,
+	 			address VARCHAR(100) NOT NULL,
+	 			district VARCHAR(20),
+	 			province VARCHAR(15),
+	 			gender CHAR(1) NOT NULL,
+	 			DoB DATE,
+	 			phoneNo CHAR(10),
+	 			
+	 			CONSTRAINT Voter_pk PRIMARY KEY(id)
+            ); 
+         ]]>
+	</query>
+	
+	
+	<!-- Create the Admin table -->
+	<query id="create_admin_table">
+         <![CDATA[        
+            CREATE TABLE Admin(
+            	id VARCHAR(10),
+	 			username VARCHAR(40) NOT NULL,
+	 			nic CHAR(10) UNIQUE NOT NULL,
+	 			password VARCHAR(20) NOT NULL,
+	 			email VARCHAR(40) UNIQUE NOT NULL,
+	 			userType VARCHAR(15) DEFAULT 'admin',
+	 			isVoted BOOLEAN DEFAULT 0,
+	 			fname VARCHAR(20) NOT NULL,
+	 			lname VARCHAR(20) NOT NULL,
+	 			address VARCHAR(100) NOT NULL,
+	 			district VARCHAR(20),
+	 			province VARCHAR(15),
+	 			gender CHAR(1) NOT NULL,
+	 			DoB DATE,
+	 			phoneNo CHAR(10),
+	 			
+	 			CONSTRAINT Voter_pk PRIMARY KEY(id)
+            ); 
+         ]]>
+	</query>
+	
+	
+	<!-- Create the Candidate table -->
+	<query id="create_candidate_table">
+         <![CDATA[        
+            CREATE TABLE Candidate(
+            	id VARCHAR(10),
+	 			username VARCHAR(40) NOT NULL,
+	 			nic CHAR(10) UNIQUE NOT NULL,
+	 			password VARCHAR(20) NOT NULL,
+	 			email VARCHAR(40) UNIQUE NOT NULL,
+	 			userType VARCHAR(15) DEFAULT 'candidate',
+	 			isVoted BOOLEAN DEFAULT 0,
+	 			fname VARCHAR(20) NOT NULL,
+	 			lname VARCHAR(20) NOT NULL,
+	 			address VARCHAR(100) NOT NULL,
+	 			district VARCHAR(20),
+	 			province VARCHAR(15),
+	 			gender CHAR(1) NOT NULL,
+	 			DoB DATE,
+	 			phoneNo CHAR(10),
+	 			
+	 			CONSTRAINT Voter_pk PRIMARY KEY(id)
+            ); 
+         ]]>
+	</query>
+
+
+	<!-- Insert values to the Voter Table -->
+	<query id="insert_voter">
+         <![CDATA[        
+            INSERT INTO Voter (id, username, nic, password, email, userType, isVoted, fname, lname, address, district, province, 
+            gender, DoB, phoneNo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); 
+         ]]>
+	</query>
+	
+	
+	<!-- Insert values to the Admin Table -->
+	<query id="insert_admin">
+         <![CDATA[        
+            INSERT INTO Admin (id, username, nic, password, email, userType, isVoted, fname, lname, address, district, province, 
+            gender, DoB, phoneNo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); 
+         ]]>
+	</query>
+	
+	
+	<!-- Insert values to the Candidate Table -->
+	<query id="insert_candidate">
+         <![CDATA[        
+            INSERT INTO Candidate (id, username, nic, password, email, userType, isVoted, fname, lname, address, district, province, 
+            gender, DoB, phoneNo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); 
+         ]]>
+	</query>
+	
+	
+	<query id="insert_candidates">
+         <![CDATA[        
+            INSERT INTO Candidate (username, nic, password, email, userType, fname, lname, address, district, province, 
+            gender, DoB, phoneNo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); 
+         ]]>
+	</query>
+	
+	
+	<!-- Select a particular voter by id -->
+	<query id="voter_by_id">
+         <![CDATA[        
+            SELECT * 
+            FROM Voter
+            WHERE id = ?;
+        ]]>
+	</query>
+	
+	
+	<!-- Select a particular admin by id -->
+	<query id="admin_by_id">
+         <![CDATA[        
+            SELECT * 
+            FROM Admin
+            WHERE id = ?;
+        ]]>
+	</query>
+	
+	
+	<!-- Select a particular candidate by id -->
+	<query id="candidate_by_id">
+         <![CDATA[        
+            SELECT * 
+            FROM Candidate
+            WHERE id = ?;
+        ]]>
+	</query>
+
+
+	<!-- Select all voters -->
+	<query id="all_voters">
+         <![CDATA[        
+            SELECT *
+            FROM Voter;
+        ]]>
+	</query>
+	
+	
+	<!-- Select all candidates -->
+	<query id="all_candidates">
+         <![CDATA[        
+            SELECT *
+            FROM Candidate;
+        ]]>
+	</query>
+	
+	
+	<!-- Select all admins -->
+	<query id="all_admins">
+         <![CDATA[        
+            SELECT *
+            FROM Admin;
+        ]]>
+	</query>
+
+	
+	<!-- Delete a particular voter by id -->
+	<query id="remove_voter">
+         <![CDATA[        
+            DELETE
+            FROM Voter
+            WHERE id = ?;
+        ]]>
+	</query>
+
+
+	<!-- Delete a particular admin by id -->
+	<query id="remove_admin">
+         <![CDATA[        
+            DELETE
+            FROM Admin
+            WHERE id = ?;
+        ]]>
+	</query>
+	
+	
+	<!-- Delete a particular candidate by id -->
+	<query id="remove_candidate">
+         <![CDATA[        
+            DELETE
+            FROM Candidate
+            WHERE id = ?;
+        ]]>
+	</query>
+	
+	
+	<!-- Update a particular voter by id -->
+	<query id="update_voter">
+         <![CDATA[        
+            UPDATE Voter
+            SET username = ?, nic = ?, password = ?, email = ?, userType = ?, isVoted = ?, fname = ?, lname = ?, address = ?, 
+            district = ?, province = ?, gender = ?, DoB = ?, phoneNo = ? 
+            WHERE id = ?;
+        ]]>
+	</query>
+	
+	
+	<!-- Update a particular candidate by id -->
+	<query id="update_candidate">
+         <![CDATA[        
+            UPDATE Candidate
+            SET username = ?, nic = ?, password = ?, email = ?, userType = ?, isVoted = ?, fname = ?, lname = ?, address = ?, 
+            district = ?, province = ?, gender = ?, DoB = ?, phoneNo = ? 
+            WHERE id = ?;
+        ]]>
+	</query>
+	
+	
+	<!-- Update a particular admin by id -->
+	<query id="update_admin">
+         <![CDATA[        
+            UPDATE Admin
+            SET username = ?, nic = ?, password = ?, email = ?, userType = ?, isVoted = ?, fname = ?, lname = ?, address = ?, 
+            district = ?, province = ?, gender = ?, DoB = ?, phoneNo = ? 
+            WHERE id = ?;
+        ]]>
+	</query>
+	
+	
+	<!-- Get Voter IDs -->
+	<query id="voter_ids">
+         <![CDATA[        
+            SELECT id
+            FROM Voter;
+        ]]>
+	</query>
+	
+	
+	<!-- Get candidate IDs -->
+	<query id="candidate_ids">
+         <![CDATA[        
+            SELECT id
+            FROM Candidate;
+        ]]>
+	</query>
+	
+	
+	<!-- Get admin IDs -->
+	<query id="admin_ids">
+         <![CDATA[        
+            SELECT id
+            FROM Admin;
+        ]]>
+	</query>
+	
+</Queries>
