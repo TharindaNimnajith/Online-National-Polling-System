@@ -1,4 +1,4 @@
-# -Online-National-Polling-System
+# Online-National-Polling-System
 
 - A dynamic web application developed as a group project
 - 2nd year 1st semester group project for the OOP (Object Oriented Programming) module (Dynamic Web Project)
